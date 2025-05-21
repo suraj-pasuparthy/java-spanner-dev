@@ -23,7 +23,10 @@ import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.InternalApi;
 import com.google.api.core.NanoClock;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import com.google.api.gax.core.CredentialsProvider;
+import com.google.cloud.grpc.GcpManagedChannelOptions.GcpChannelPoolOptions;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.GrpcCallContext;
@@ -31,6 +34,7 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.grpc.GrpcTransportChannel;
 import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
+import com.google.cloud.grpc.GcpManagedChannelOptions.GcpResiliencyOptions;
 import com.google.api.gax.longrunning.OperationFuture;
 import com.google.api.gax.retrying.ResultRetryAlgorithm;
 import com.google.api.gax.retrying.RetrySettings;
@@ -277,6 +281,8 @@ public class GapicSpannerRpc implements SpannerRpc {
   private final boolean endToEndTracingEnabled;
   private final int numChannels;
   private final boolean isGrpcGcpExtensionEnabled;
+
+  private static final Logger logger = Logger.getLogger(GapicSpannerRpc.class.getName());
 
   private Supplier<Boolean> directPathEnabledSupplier = () -> false;
 
@@ -582,11 +588,39 @@ public class GapicSpannerRpc implements SpannerRpc {
     }
     // TODO: Add default labels with values: client_id, database, instance_id.
     if (metricsOptions.getNamePrefix().equals("")) {
+      logger.log(Level.WARNING, "Enabling gcp-channel-pool");
       metricsOptionsBuilder.withNamePrefix("cloud.google.com/java/spanner/gcp-channel-pool/");
     }
-    return GcpManagedChannelOptions.newBuilder(grpcGcpOptions)
-        .withMetricsOptions(metricsOptionsBuilder.build())
-        .build();
+    GcpManagedChannelOptions.Builder channelOptionsBuilder =
+        GcpManagedChannelOptions.newBuilder(grpcGcpOptions)
+            .withMetricsOptions(metricsOptionsBuilder.build())
+            .withResiliencyOptions(
+                GcpResiliencyOptions.newBuilder()
+                    .setNotReadyFallback(true).build());
+
+    boolean isMultiplexedSessionEnabledForAllTransactions =
+        options.getSessionPoolOptions().getUseMultiplexedSession();
+    logger.log(Level.WARNING, "client_lib: mux enabled for all txns: " +
+        isMultiplexedSessionEnabledForAllTransactions);
+    if (isMultiplexedSessionEnabledForAllTransactions == true) {
+      // When multiplexed session is enabled for all the transactions then enable dynamic channel
+      // pooling by default.
+      // TODO: What if backend throws an unimplemented error and the transactions fallback to using
+      // regular sessions? Is there a way to disable dynamic scaling on the fly?
+      // Set resiliency options to ensure that a channel is marked ready only after the
+      // connection has been successfuly established.
+      logger.log(Level.WARNING,
+                 "client_lib: Setting dynamic scaling min 1 max 3");
+      GcpChannelPoolOptions.Builder channelPoolOptionsBuilder =
+          GcpChannelPoolOptions.newBuilder()
+              .setDynamicScaling(15, 25, Duration.ofMinutes(3L))
+              .setInitSize(4)
+              .setMinSize(2)
+              .setMaxSize(10)
+              .setAffinityKeyLifetime(Duration.ofSeconds(60));
+      channelOptionsBuilder.withChannelPoolOptions(channelPoolOptionsBuilder.build());
+    }
+    return channelOptionsBuilder.build();
   }
 
   @SuppressWarnings("rawtypes")
@@ -605,10 +639,12 @@ public class GapicSpannerRpc implements SpannerRpc {
           if (options.getChannelConfigurator() != null) {
             channelBuilder = options.getChannelConfigurator().apply(channelBuilder);
           }
+          // Set the pool size to max since we want to cap the max number of
+          // channels to 10.
           return GcpManagedChannelBuilder.forDelegateBuilder(channelBuilder)
               .withApiConfigJsonString(jsonApiConfig)
               .withOptions(grpcGcpOptions)
-              .setPoolSize(options.getNumChannels());
+              .setPoolSize(10);
         };
 
     // Disable the GAX channel pooling functionality by setting the GAX channel pool size to 1.
@@ -2013,7 +2049,7 @@ public class GapicSpannerRpc implements SpannerRpc {
                 context
                     .getCallOptions()
                     .withOption(
-                        GcpManagedChannel.AFFINITY_KEY, String.valueOf(boundedChannelHint)));
+                        GcpManagedChannel.DISABLE_AFFINITY_KEY, true));
       } else {
         // Set channel affinity in GAX.
         context = context.withChannelAffinity(Option.CHANNEL_HINT.getLong(options).intValue());

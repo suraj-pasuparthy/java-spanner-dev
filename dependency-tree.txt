@@ -1,0 +1,1411 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.google.cloud:google-cloud-spanner:jar:6.88.0-SNAPSHOT
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.graalvm.buildtools:native-maven-plugin is missing. @ line 118, column 15
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.google.cloud:google-cloud-spanner-executor:jar:6.88.0-SNAPSHOT
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-resources-plugin is missing. @ line 212, column 15
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] Inspecting build with total of 12 modules...
+[[1;34mINFO[m] Installing Nexus Staging features:
+[[1;34mINFO[m]   ... total of 12 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Google Cloud Spanner Parent                                        [pom]
+[[1;34mINFO[m] proto-google-cloud-spanner-admin-instance-v1                       [jar]
+[[1;34mINFO[m] proto-google-cloud-spanner-v1                                      [jar]
+[[1;34mINFO[m] proto-google-cloud-spanner-admin-database-v1                       [jar]
+[[1;34mINFO[m] grpc-google-cloud-spanner-admin-instance-v1                        [jar]
+[[1;34mINFO[m] grpc-google-cloud-spanner-v1                                       [jar]
+[[1;34mINFO[m] grpc-google-cloud-spanner-admin-database-v1                        [jar]
+[[1;34mINFO[m] proto-google-cloud-spanner-executor-v1                             [jar]
+[[1;34mINFO[m] grpc-google-cloud-spanner-executor-v1                              [jar]
+[[1;34mINFO[m] Google Cloud Spanner                                               [jar]
+[[1;34mINFO[m] Google Cloud Spanner Executor                                      [jar]
+[[1;34mINFO[m] Google Cloud Spanner BOM                                           [pom]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------< [0;36mcom.google.cloud:google-cloud-spanner-parent[0;1m >------------[m
+[[1;34mINFO[m] [1mBuilding Google Cloud Spanner Parent 6.88.0-SNAPSHOT              [1/12][m
+[[1;34mINFO[m]   from pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mgoogle-cloud-spanner-parent[0;1m ---[m
+[[1;34mINFO[m] com.google.cloud:google-cloud-spanner-parent:pom:6.88.0-SNAPSHOT
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--< [0;36mcom.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1[0;1m >--[m
+[[1;34mINFO[m] [1mBuilding proto-google-cloud-spanner-admin-instance-v1 6.88.0-SNAPSHOT [2/12][m
+[[1;34mINFO[m]   from proto-google-cloud-spanner-admin-instance-v1/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mproto-google-cloud-spanner-admin-instance-v1[0;1m ---[m
+[[1;34mINFO[m] com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:api-common:jar:2.45.0:compile
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.auto.value:auto-value-annotations:jar:1.11.0:compile (version managed from 1.11.0)
+[[1;34mINFO[m] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile (version managed from 3.0.2)
+[[1;34mINFO[m] |  +- javax.annotation:javax.annotation-api:jar:1.3.2:compile (version managed from 1.3.2; scope managed from compile)
+[[1;34mINFO[m] |  +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile (version managed from 2.36.0)
+[[1;34mINFO[m] |  \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile (version managed from 3.0.0)
+[[1;34mINFO[m] +- com.google.guava:guava:jar:33.4.0-jre:compile
+[[1;34mINFO[m] |  +- com.google.guava:failureaccess:jar:1.0.2:compile
+[[1;34mINFO[m] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.checkerframework:checker-qual:jar:3.49.0:compile (version managed from 3.43.0)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] \- com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile
+[[1;34mINFO[m]    +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m]    \- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------< [0;36mcom.google.api.grpc:proto-google-cloud-spanner-v1[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding proto-google-cloud-spanner-v1 6.88.0-SNAPSHOT            [3/12][m
+[[1;34mINFO[m]   from proto-google-cloud-spanner-v1/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mproto-google-cloud-spanner-v1[0;1m ---[m
+[[1;34mINFO[m] com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:api-common:jar:2.45.0:compile
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.auto.value:auto-value-annotations:jar:1.11.0:compile (version managed from 1.11.0)
+[[1;34mINFO[m] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile (version managed from 3.0.2)
+[[1;34mINFO[m] |  +- javax.annotation:javax.annotation-api:jar:1.3.2:compile (version managed from 1.3.2; scope managed from compile)
+[[1;34mINFO[m] |  +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile (version managed from 2.36.0)
+[[1;34mINFO[m] |  \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile (version managed from 3.0.0)
+[[1;34mINFO[m] \- com.google.guava:guava:jar:33.4.0-jre:compile
+[[1;34mINFO[m]    +- com.google.guava:failureaccess:jar:1.0.2:compile
+[[1;34mINFO[m]    +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[[1;34mINFO[m]    +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m]    +- org.checkerframework:checker-qual:jar:3.49.0:compile (version managed from 3.43.0)
+[[1;34mINFO[m]    +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m]    \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--< [0;36mcom.google.api.grpc:proto-google-cloud-spanner-admin-database-v1[0;1m >--[m
+[[1;34mINFO[m] [1mBuilding proto-google-cloud-spanner-admin-database-v1 6.88.0-SNAPSHOT [4/12][m
+[[1;34mINFO[m]   from proto-google-cloud-spanner-admin-database-v1/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mproto-google-cloud-spanner-admin-database-v1[0;1m ---[m
+[[1;34mINFO[m] com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:api-common:jar:2.45.0:compile
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.auto.value:auto-value-annotations:jar:1.11.0:compile (version managed from 1.11.0)
+[[1;34mINFO[m] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile (version managed from 3.0.2)
+[[1;34mINFO[m] |  +- javax.annotation:javax.annotation-api:jar:1.3.2:compile (version managed from 1.3.2; scope managed from compile)
+[[1;34mINFO[m] |  +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile (version managed from 2.36.0)
+[[1;34mINFO[m] |  \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile (version managed from 3.0.0)
+[[1;34mINFO[m] +- com.google.guava:guava:jar:33.4.0-jre:compile
+[[1;34mINFO[m] |  +- com.google.guava:failureaccess:jar:1.0.2:compile
+[[1;34mINFO[m] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.checkerframework:checker-qual:jar:3.49.0:compile (version managed from 3.43.0)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] \- com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile
+[[1;34mINFO[m]    +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m]    \- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--< [0;36mcom.google.api.grpc:grpc-google-cloud-spanner-admin-instance-v1[0;1m >---[m
+[[1;34mINFO[m] [1mBuilding grpc-google-cloud-spanner-admin-instance-v1 6.88.0-SNAPSHOT [5/12][m
+[[1;34mINFO[m]   from grpc-google-cloud-spanner-admin-instance-v1/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mgrpc-google-cloud-spanner-admin-instance-v1[0;1m ---[m
+[[1;34mINFO[m] com.google.api.grpc:grpc-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT
+[[1;34mINFO[m] +- io.grpc:grpc-api:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile (version managed from 3.0.2)
+[[1;34mINFO[m] |  +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile (version managed from 2.30.0)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-stub:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:compile (version managed from 1.24)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-protobuf:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime (version managed from 1.70.0)
+[[1;34mINFO[m] |     +- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |     +- (com.google.code.findbugs:jsr305:jar:3.0.2:runtime - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |     \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api:api-common:jar:2.45.0:compile (version managed from 2.45.0)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.guava:guava:jar:33.4.0-jre:compile
+[[1;34mINFO[m] |  +- com.google.guava:failureaccess:jar:1.0.2:compile
+[[1;34mINFO[m] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.checkerframework:checker-qual:jar:3.49.0:compile (version managed from 3.43.0)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile (version managed from 3.0.0)
+[[1;34mINFO[m] +- com.google.auto.value:auto-value-annotations:jar:1.11.0:compile
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] \- javax.annotation:javax.annotation-api:jar:1.3.2:compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------< [0;36mcom.google.api.grpc:grpc-google-cloud-spanner-v1[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding grpc-google-cloud-spanner-v1 6.88.0-SNAPSHOT             [6/12][m
+[[1;34mINFO[m]   from grpc-google-cloud-spanner-v1/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mgrpc-google-cloud-spanner-v1[0;1m ---[m
+[[1;34mINFO[m] com.google.api.grpc:grpc-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT
+[[1;34mINFO[m] +- io.grpc:grpc-api:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile (version managed from 3.0.2)
+[[1;34mINFO[m] |  +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile (version managed from 2.30.0)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-stub:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:compile (version managed from 1.24)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-protobuf:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile (version managed from 2.48.0)
+[[1;34mINFO[m] |  |  \- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime (version managed from 1.70.0)
+[[1;34mINFO[m] |     +- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |     +- (com.google.code.findbugs:jsr305:jar:3.0.2:runtime - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |     \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api:api-common:jar:2.45.0:compile (version managed from 2.45.0)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.guava:guava:jar:33.4.0-jre:compile
+[[1;34mINFO[m] |  +- com.google.guava:failureaccess:jar:1.0.2:compile
+[[1;34mINFO[m] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.checkerframework:checker-qual:jar:3.49.0:compile (version managed from 3.43.0)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile (version managed from 3.0.0)
+[[1;34mINFO[m] +- com.google.auto.value:auto-value-annotations:jar:1.11.0:compile
+[[1;34mINFO[m] \- javax.annotation:javax.annotation-api:jar:1.3.2:compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--< [0;36mcom.google.api.grpc:grpc-google-cloud-spanner-admin-database-v1[0;1m >---[m
+[[1;34mINFO[m] [1mBuilding grpc-google-cloud-spanner-admin-database-v1 6.88.0-SNAPSHOT [7/12][m
+[[1;34mINFO[m]   from grpc-google-cloud-spanner-admin-database-v1/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mgrpc-google-cloud-spanner-admin-database-v1[0;1m ---[m
+[[1;34mINFO[m] com.google.api.grpc:grpc-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT
+[[1;34mINFO[m] +- io.grpc:grpc-api:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile (version managed from 3.0.2)
+[[1;34mINFO[m] |  +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile (version managed from 2.30.0)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-stub:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:compile (version managed from 1.24)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-protobuf:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime (version managed from 1.70.0)
+[[1;34mINFO[m] |     +- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |     +- (com.google.code.findbugs:jsr305:jar:3.0.2:runtime - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |     \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api:api-common:jar:2.45.0:compile (version managed from 2.45.0)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.guava:guava:jar:33.4.0-jre:compile
+[[1;34mINFO[m] |  +- com.google.guava:failureaccess:jar:1.0.2:compile
+[[1;34mINFO[m] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.checkerframework:checker-qual:jar:3.49.0:compile (version managed from 3.43.0)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile (version managed from 3.0.0)
+[[1;34mINFO[m] +- com.google.auto.value:auto-value-annotations:jar:1.11.0:compile
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] \- javax.annotation:javax.annotation-api:jar:1.3.2:compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----< [0;36mcom.google.api.grpc:proto-google-cloud-spanner-executor-v1[0;1m >-----[m
+[[1;34mINFO[m] [1mBuilding proto-google-cloud-spanner-executor-v1 6.88.0-SNAPSHOT   [8/12][m
+[[1;34mINFO[m]   from proto-google-cloud-spanner-executor-v1/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mproto-google-cloud-spanner-executor-v1[0;1m ---[m
+[[1;34mINFO[m] com.google.api.grpc:proto-google-cloud-spanner-executor-v1:jar:6.88.0-SNAPSHOT
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:api-common:jar:2.45.0:compile
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.auto.value:auto-value-annotations:jar:1.11.0:compile (version managed from 1.11.0)
+[[1;34mINFO[m] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile (version managed from 3.0.2)
+[[1;34mINFO[m] |  +- javax.annotation:javax.annotation-api:jar:1.3.2:compile (version managed from 1.3.2; scope managed from compile)
+[[1;34mINFO[m] |  +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile (version managed from 2.36.0)
+[[1;34mINFO[m] |  \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile (version managed from 3.0.0)
+[[1;34mINFO[m] +- com.google.guava:guava:jar:33.4.0-jre:compile
+[[1;34mINFO[m] |  +- com.google.guava:failureaccess:jar:1.0.2:compile
+[[1;34mINFO[m] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.checkerframework:checker-qual:jar:3.49.0:compile (version managed from 3.43.0)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] \- com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m]    +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m]    +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m]    +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m]    +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m]    \- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----< [0;36mcom.google.api.grpc:grpc-google-cloud-spanner-executor-v1[0;1m >------[m
+[[1;34mINFO[m] [1mBuilding grpc-google-cloud-spanner-executor-v1 6.88.0-SNAPSHOT    [9/12][m
+[[1;34mINFO[m]   from grpc-google-cloud-spanner-executor-v1/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mgrpc-google-cloud-spanner-executor-v1[0;1m ---[m
+[[1;34mINFO[m] com.google.api.grpc:grpc-google-cloud-spanner-executor-v1:jar:6.88.0-SNAPSHOT
+[[1;34mINFO[m] +- io.grpc:grpc-api:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile (version managed from 3.0.2)
+[[1;34mINFO[m] |  +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile (version managed from 2.30.0)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-stub:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:compile (version managed from 1.24)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-protobuf:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime (version managed from 1.70.0)
+[[1;34mINFO[m] |     +- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |     +- (com.google.code.findbugs:jsr305:jar:3.0.2:runtime - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |     \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-executor-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile (version managed from 1.48.0)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api:api-common:jar:2.45.0:compile (version managed from 2.45.0)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- com.google.auto.value:auto-value-annotations:jar:1.11.0:compile (version managed from 1.11.0)
+[[1;34mINFO[m] |  |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile (version managed from 6.88.0-SNAPSHOT)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile (version managed from 6.88.0-SNAPSHOT)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile (version managed from 6.88.0-SNAPSHOT)
+[[1;34mINFO[m] |     +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |     +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |     +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |     +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |     \- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.guava:guava:jar:33.4.0-jre:compile
+[[1;34mINFO[m] |  +- com.google.guava:failureaccess:jar:1.0.2:compile
+[[1;34mINFO[m] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.checkerframework:checker-qual:jar:3.49.0:compile (version managed from 3.43.0)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile (version managed from 3.0.0)
+[[1;34mINFO[m] \- javax.annotation:javax.annotation-api:jar:1.3.2:compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36mcom.google.cloud:google-cloud-spanner[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding Google Cloud Spanner 6.88.0-SNAPSHOT                    [10/12][m
+[[1;34mINFO[m]   from google-cloud-spanner/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mgoogle-cloud-spanner[0;1m ---[m
+[[1;34mINFO[m] com.google.cloud:google-cloud-spanner:jar:6.88.0-SNAPSHOT
+[[1;34mINFO[m] +- com.google.cloud:grpc-gcp:jar:1.6.2-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:runtime - version managed from 3.20.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:runtime - version managed from 3.20.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-netty-shaded:jar:1.70.0:runtime - version managed from 1.36.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:runtime - version managed from 1.36.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:runtime - version managed from 1.36.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:runtime - version managed from 0.28.3; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api:api-common:jar:2.45.0:runtime - version managed from 2.1.5; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-api:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile (version managed from 2.30.0)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-auth:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.24.1; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-inprocess:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-core:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-core:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.gson:gson:jar:2.12.1:runtime - version managed from 2.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.android:annotations:jar:4.1.1.4:runtime
+[[1;34mINFO[m] |  +- org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:compile (version managed from 1.24; scope not updated to compile)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.perfmark:perfmark-api:jar:0.27.0:runtime (version managed from 0.27.0)
+[[1;34mINFO[m] |  \- io.grpc:grpc-context:jar:1.70.0:compile (version managed from 1.70.0; scope not updated to compile)
+[[1;34mINFO[m] |     \- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-netty-shaded:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- io.grpc:grpc-util:jar:1.70.0:runtime (version managed from 1.70.0)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-core:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:runtime - version managed from 1.24; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-core:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.perfmark:perfmark-api:jar:0.27.0:runtime - version managed from 0.27.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:runtime - version managed from 1.24; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-protobuf:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime (version managed from 1.70.0)
+[[1;34mINFO[m] |     +- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |     +- (com.google.code.findbugs:jsr305:jar:3.0.2:runtime - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |     \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-stub:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:compile - version managed from 1.24; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:api-common:jar:2.45.0:compile
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.auto.value:auto-value-annotations:jar:1.11.0:compile (version managed from 1.11.0)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile (version managed from 3.0.0)
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java-util:jar:3.25.5:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.gson:gson:jar:2.12.1:compile - version managed from 2.8.9; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.18.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 32.0.1-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 2.8; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:grpc-google-common-protos:jar:2.53.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:compile - version managed from 1.24; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.guava:failureaccess:jar:1.0.2:compile
+[[1;34mINFO[m] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[[1;34mINFO[m] |  +- org.checkerframework:checker-qual:jar:3.49.0:compile (version managed from 3.49.0; scope not updated to compile)
+[[1;34mINFO[m] |  +- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.cloud:google-cloud-core:jar:2.52.0:compile
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.http-client:google-http-client-gson:jar:1.46.3:compile (version managed from 1.46.3)
+[[1;34mINFO[m] |  |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.code.gson:gson:jar:2.12.1:compile - version managed from 2.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.cloud:google-cloud-core-grpc:jar:2.52.0:compile
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.cloud:google-cloud-core:jar:2.52.0:compile - version managed from 2.52.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:gax-grpc:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.opencensus:opencensus-api:jar:0.31.1:compile
+[[1;34mINFO[m] |  \- (io.grpc:grpc-context:jar:1.70.0:compile - version managed from 1.27.2; omitted for duplicate)
+[[1;34mINFO[m] +- io.opencensus:opencensus-contrib-grpc-util:jar:0.31.1:compile
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.grpc:grpc-core:jar:1.70.0:compile - version managed from 1.27.2; omitted for duplicate)
+[[1;34mINFO[m] +- io.opencensus:opencensus-impl:jar:0.31.1:test
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:test - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.opencensus:opencensus-impl-core:jar:0.31.1:test (version managed from 0.31.1)
+[[1;34mINFO[m] |  |  +- (io.opencensus:opencensus-api:jar:0.31.1:test - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.guava:guava:jar:33.4.0-jre:test - version managed from 29.0-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- com.lmax:disruptor:jar:3.4.2:test
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-api:jar:1.47.0:compile
+[[1;34mINFO[m] |  \- (io.opentelemetry:opentelemetry-context:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-context:jar:1.47.0:compile
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-sdk:jar:1.47.0:compile
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-sdk-trace:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-sdk-metrics:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- io.opentelemetry:opentelemetry-sdk-logs:jar:1.47.0:compile (version managed from 1.47.0)
+[[1;34mINFO[m] |     +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |     \- (io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:compile
+[[1;34mINFO[m] |  \- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-sdk-metrics:jar:1.47.0:compile
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.cloud.opentelemetry:detector-resources-support:jar:0.33.0:compile
+[[1;34mINFO[m] +- com.google.cloud:google-cloud-monitoring:jar:3.54.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.35.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.40.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-monitoring-v3:jar:3.54.0:compile - omitted for conflict with 3.57.0)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:failureaccess:jar:1.0.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile - omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.checkerframework:checker-qual:jar:3.49.0:compile - version managed from 3.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.57.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.29.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-context:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:gax-grpc:jar:2.62.0:compile - version managed from 2.57.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-inprocess:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-core:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.android:annotations:jar:4.1.1.4:runtime - omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:runtime - version managed from 1.24; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-alts:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-grpclb:jar:1.70.0:compile (version managed from 1.67.1)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:runtime - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.conscrypt:conscrypt-openjdk-uber:jar:2.5.2:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-auth:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-netty-shaded:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-util:jar:1.70.0:runtime - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.perfmark:perfmark-api:jar:0.27.0:runtime - version managed from 0.27.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-googleapis:jar:1.70.0:runtime - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-xds:jar:1.70.0:runtime (version managed from 1.67.1)
+[[1;34mINFO[m] |  +- io.grpc:grpc-services:jar:1.70.0:runtime (version managed from 1.67.1)
+[[1;34mINFO[m] |  +- com.google.re2j:re2j:jar:1.7:runtime
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:runtime - version managed from 1.29.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client:jar:1.46.3:runtime - version managed from 1.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.apache.httpcomponents:httpclient:jar:4.5.14:compile (version managed from 4.5.14)
+[[1;34mINFO[m] |  +- commons-codec:commons-codec:jar:1.18.0:runtime (version managed from 1.17.1)
+[[1;34mINFO[m] |  +- org.apache.httpcomponents:httpcore:jar:4.4.16:compile (version managed from 4.4.16; scope not updated to compile)
+[[1;34mINFO[m] |  +- io.opencensus:opencensus-contrib-http-util:jar:0.31.1:compile (version managed from 0.31.1)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client-gson:jar:1.46.3:runtime - version managed from 1.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.code.gson:gson:jar:2.12.1:runtime - version managed from 2.11.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-monitoring-v3:jar:3.57.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.50.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.42.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:failureaccess:jar:1.0.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile - omitted for duplicate)
+[[1;34mINFO[m] |  \- (org.checkerframework:checker-qual:jar:3.49.0:compile - version managed from 3.48.3; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.46.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client-gson:jar:1.46.3:compile - version managed from 1.46.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.code.gson:gson:jar:2.12.1:compile - version managed from 2.12.1; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.http-client:google-http-client:jar:1.46.3:compile
+[[1;34mINFO[m] |  +- (org.apache.httpcomponents:httpclient:jar:4.5.14:compile - version managed from 4.5.14; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.apache.httpcomponents:httpcore:jar:4.4.16:compile - version managed from 4.4.16; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 30.1.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-context:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.opencensus:opencensus-contrib-http-util:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:grpc-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:grpc-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:grpc-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.guava:guava:jar:33.4.0-jre:compile
+[[1;34mINFO[m] |  +- (com.google.guava:failureaccess:jar:1.0.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile - omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.checkerframework:checker-qual:jar:3.49.0:compile - version managed from 3.43.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:gax:jar:2.62.0:compile
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:gax-grpc:jar:2.62.0:compile
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-inprocess:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-alts:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-auth:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-netty-shaded:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.grpc:grpc-googleapis:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:gax-httpjson:jar:2.62.0:compile
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.gson:gson:jar:2.12.1:compile - version managed from 2.12.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client-gson:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java-util:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] +- org.threeten:threetenbp:jar:1.7.0:compile
+[[1;34mINFO[m] +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[[1;34mINFO[m] +- com.google.code.gson:gson:jar:2.12.1:compile
+[[1;34mINFO[m] |  \- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.auth:google-auth-library-credentials:jar:1.33.1:compile
+[[1;34mINFO[m] +- io.grpc:grpc-alts:jar:1.70.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-auth:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-core:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-context:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-grpclb:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.conscrypt:conscrypt-openjdk-uber:jar:2.5.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.24.1; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.grpc:grpc-netty-shaded:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-googleapis:jar:1.70.0:runtime (scope not updated to runtime)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-alts:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-core:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-xds:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-jre; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-rls:jar:1.70.0:runtime
+[[1;34mINFO[m] |  +- (io.grpc:grpc-util:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-core:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:runtime - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- org.graalvm.sdk:graal-sdk:jar:24.1.2:provided
+[[1;34mINFO[m] |  +- org.graalvm.sdk:collections:jar:24.1.2:provided
+[[1;34mINFO[m] |  +- (org.graalvm.sdk:nativeimage:jar:24.1.2:provided - version managed from 24.1.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.graalvm.polyglot:polyglot:jar:24.1.2:provided
+[[1;34mINFO[m] |  |  +- (org.graalvm.sdk:collections:jar:24.1.2:provided - omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (org.graalvm.sdk:nativeimage:jar:24.1.2:provided - version managed from 24.1.2; omitted for duplicate)
+[[1;34mINFO[m] |  \- org.graalvm.sdk:word:jar:24.1.2:provided
+[[1;34mINFO[m] +- org.graalvm.sdk:nativeimage:jar:24.1.2:provided (scope not updated to provided)
+[[1;34mINFO[m] |  \- (org.graalvm.sdk:word:jar:24.1.2:provided - omitted for duplicate)
+[[1;34mINFO[m] +- junit:junit:jar:4.13.2:test
+[[1;34mINFO[m] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-executor-v1:jar:6.88.0-SNAPSHOT:provided
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:provided - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:provided - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:provided - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:provided - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:provided - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:provided - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:provided - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:provided - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:grpc-google-cloud-spanner-executor-v1:jar:6.88.0-SNAPSHOT:provided
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:provided - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:provided - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:provided - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:provided - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:provided - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-executor-v1:jar:6.88.0-SNAPSHOT:provided - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:provided - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:gax:jar:testlib:2.62.0:test
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:test - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:test - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:test - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:test - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:test - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:test - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:test - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:test - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:test - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:gax-grpc:jar:testlib:2.62.0:test
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:test - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:test - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:test - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:test - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:test - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-inprocess:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:test - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:test - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-alts:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-auth:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-netty-shaded:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.grpc:grpc-googleapis:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:gax-httpjson:jar:testlib:2.62.0:test
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:test - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:test - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:test - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:test - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.gson:gson:jar:2.12.1:test - version managed from 2.12.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:test - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client:jar:1.46.3:test - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:test - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:test - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:test - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client-gson:jar:1.46.3:test - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java-util:jar:3.25.5:test - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.truth:truth:jar:1.4.4:test
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:test - version managed from 33.2.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.jspecify:jspecify:jar:0.3.0:test
+[[1;34mINFO[m] |  +- (junit:junit:jar:4.13.2:test - version managed from 4.13.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:test - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:test - version managed from 2.28.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- org.ow2.asm:asm:jar:9.7:test
+[[1;34mINFO[m] +- org.mockito:mockito-core:jar:4.11.0:test
+[[1;34mINFO[m] |  +- net.bytebuddy:byte-buddy:jar:1.12.19:test
+[[1;34mINFO[m] |  +- net.bytebuddy:byte-buddy-agent:jar:1.12.19:test
+[[1;34mINFO[m] |  \- org.objenesis:objenesis:jar:3.3:test
+[[1;34mINFO[m] +- org.json:json:jar:20240303:test
+[[1;34mINFO[m] +- com.google.guava:guava-testlib:jar:33.4.0-jre:test
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:test - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.checkerframework:checker-qual:jar:3.49.0:test - version managed from 3.43.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:test - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.j2objc:j2objc-annotations:jar:3.0.0:test - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:test - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (junit:junit:jar:4.13.2:test - version managed from 4.13.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] +- org.hamcrest:hamcrest:jar:3.0:test
+[[1;34mINFO[m] +- org.openjdk.jmh:jmh-core:jar:1.37:test
+[[1;34mINFO[m] |  +- net.sf.jopt-simple:jopt-simple:jar:5.0.4:test
+[[1;34mINFO[m] |  \- org.apache.commons:commons-math3:jar:3.6.1:test
+[[1;34mINFO[m] +- org.openjdk.jmh:jmh-generator-annprocess:jar:1.37:test
+[[1;34mINFO[m] |  \- (org.openjdk.jmh:jmh-core:jar:1.37:test - omitted for duplicate)
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-sdk-trace:jar:1.47.0:test (scope not updated to compile)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:test - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:test - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-sdk-testing:jar:1.47.0:test
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:test - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.opentelemetry:opentelemetry-sdk:jar:1.47.0:test - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] \- javax.annotation:javax.annotation-api:jar:1.3.2:compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------< [0;36mcom.google.cloud:google-cloud-spanner-executor[0;1m >-----------[m
+[[1;34mINFO[m] [1mBuilding Google Cloud Spanner Executor 6.88.0-SNAPSHOT           [11/12][m
+[[1;34mINFO[m]   from google-cloud-spanner-executor/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mgoogle-cloud-spanner-executor[0;1m ---[m
+[[1;34mINFO[m] com.google.cloud:google-cloud-spanner-executor:jar:6.88.0-SNAPSHOT
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-api:jar:1.47.0:compile
+[[1;34mINFO[m] |  \- (io.opentelemetry:opentelemetry-context:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-context:jar:1.47.0:compile
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-sdk:jar:1.47.0:compile
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-sdk-trace:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.opentelemetry:opentelemetry-sdk-metrics:jar:1.47.0:compile (version managed from 1.47.0)
+[[1;34mINFO[m] |  |  +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- io.opentelemetry:opentelemetry-sdk-logs:jar:1.47.0:compile (version managed from 1.47.0)
+[[1;34mINFO[m] |     +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |     \- (io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:compile
+[[1;34mINFO[m] |  \- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.opentelemetry:opentelemetry-sdk-trace:jar:1.47.0:compile
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.cloud.opentelemetry:exporter-trace:jar:0.33.0:compile
+[[1;34mINFO[m] |  +- com.google.auto.value:auto-value-annotations:jar:1.11.0:compile (version managed from 1.11.0)
+[[1;34mINFO[m] |  +- org.slf4j:slf4j-api:jar:2.0.16:compile
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.42.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-sdk:jar:1.47.0:compile - version managed from 1.42.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.cloud:google-cloud-core:jar:2.52.0:compile - version managed from 2.44.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.cloud:google-cloud-trace:jar:2.51.0:compile - omitted for conflict with 2.53.0)
+[[1;34mINFO[m] |  +- com.google.api.grpc:grpc-google-cloud-trace-v2:jar:2.51.0:compile
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.68.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.32.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.68.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.68.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.45.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime - version managed from 1.68.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-cloud-trace-v2:jar:2.51.0:compile - omitted for conflict with 2.53.0)
+[[1;34mINFO[m] |  |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.37.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:failureaccess:jar:1.0.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.checkerframework:checker-qual:jar:3.49.0:compile - version managed from 3.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- com.google.cloud.opentelemetry:shared-resourcemapping:jar:0.33.0:runtime (version managed from 0.33.0)
+[[1;34mINFO[m] +- io.opentelemetry.semconv:opentelemetry-semconv:jar:1.29.0-alpha:compile
+[[1;34mINFO[m] +- com.google.cloud:google-cloud-spanner:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- com.google.cloud:grpc-gcp:jar:1.6.2-SNAPSHOT:compile (version managed from 1.6.2-SNAPSHOT)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:runtime - version managed from 3.20.3; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:runtime - version managed from 3.20.3; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-netty-shaded:jar:1.70.0:runtime - version managed from 1.36.3; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf:jar:1.70.0:runtime - version managed from 1.36.3; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-stub:jar:1.70.0:runtime - version managed from 1.36.3; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.opencensus:opencensus-api:jar:0.31.1:runtime - version managed from 0.28.3; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.api:api-common:jar:2.45.0:runtime - version managed from 2.1.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-auth:jar:1.70.0:compile (version managed from 1.70.0; scope not updated to compile)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.24.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-inprocess:jar:1.70.0:compile (version managed from 1.70.0)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-core:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-core:jar:1.70.0:compile (version managed from 1.70.0; scope not updated to compile)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.code.gson:gson:jar:2.12.1:runtime - version managed from 2.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.android:annotations:jar:4.1.1.4:runtime - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:runtime - version managed from 1.24; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.perfmark:perfmark-api:jar:0.27.0:runtime - version managed from 0.27.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (io.grpc:grpc-context:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-netty-shaded:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:grpc-google-common-protos:jar:2.53.0:compile (version managed from 2.53.0)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:compile - version managed from 1.24; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:failureaccess:jar:1.0.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.checkerframework:checker-qual:jar:3.49.0:compile - version managed from 3.49.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile (version managed from 1.48.0)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.cloud:google-cloud-core:jar:2.52.0:compile - version managed from 2.52.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.cloud:google-cloud-core-grpc:jar:2.52.0:compile (version managed from 2.52.0)
+[[1;34mINFO[m] |  |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.cloud:google-cloud-core:jar:2.52.0:compile - version managed from 2.52.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api:gax-grpc:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.opencensus:opencensus-api:jar:0.31.1:compile (version managed from 0.31.1)
+[[1;34mINFO[m] |  |  \- (io.grpc:grpc-context:jar:1.70.0:compile - version managed from 1.27.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.opencensus:opencensus-contrib-grpc-util:jar:0.31.1:compile (version managed from 0.31.1)
+[[1;34mINFO[m] |  |  +- (io.opencensus:opencensus-api:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (io.grpc:grpc-core:jar:1.70.0:compile - version managed from 1.27.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-api:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-context:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-sdk:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-sdk-common:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opentelemetry:opentelemetry-sdk-metrics:jar:1.47.0:compile - version managed from 1.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.cloud.opentelemetry:detector-resources-support:jar:0.33.0:compile (version managed from 0.33.0)
+[[1;34mINFO[m] |  +- com.google.cloud:google-cloud-monitoring:jar:3.54.0:compile
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.35.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.40.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-cloud-monitoring-v3:jar:3.54.0:compile - omitted for conflict with 3.57.0)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:failureaccess:jar:1.0.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.checkerframework:checker-qual:jar:3.49.0:compile - version managed from 3.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.57.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.29.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.opencensus:opencensus-api:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-context:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api:gax-grpc:jar:2.62.0:compile - version managed from 2.57.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-inprocess:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-core:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.android:annotations:jar:4.1.1.4:runtime - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:runtime - version managed from 1.24; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-alts:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-grpclb:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:runtime - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.conscrypt:conscrypt-openjdk-uber:jar:2.5.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-auth:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-netty-shaded:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-util:jar:1.70.0:runtime - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.perfmark:perfmark-api:jar:0.27.0:runtime - version managed from 0.27.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-googleapis:jar:1.70.0:runtime - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-xds:jar:1.70.0:runtime - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-services:jar:1.70.0:runtime - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.re2j:re2j:jar:1.7:runtime - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:runtime - version managed from 1.29.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.http-client:google-http-client:jar:1.46.3:runtime - version managed from 1.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.apache.httpcomponents:httpclient:jar:4.5.14:runtime - version managed from 4.5.14; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (commons-codec:commons-codec:jar:1.18.0:runtime - version managed from 1.17.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.apache.httpcomponents:httpcore:jar:4.4.16:runtime - version managed from 4.4.16; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.opencensus:opencensus-contrib-http-util:jar:0.31.1:runtime - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.http-client:google-http-client-gson:jar:1.46.3:runtime - version managed from 1.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.code.gson:gson:jar:2.12.1:runtime - version managed from 2.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:proto-google-cloud-monitoring-v3:jar:3.57.0:compile
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.50.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.42.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:failureaccess:jar:1.0.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (org.checkerframework:checker-qual:jar:3.49.0:compile - version managed from 3.48.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:grpc-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile (version managed from 6.88.0-SNAPSHOT)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:grpc-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile (version managed from 6.88.0-SNAPSHOT)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:grpc-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile (version managed from 6.88.0-SNAPSHOT)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:gax-grpc:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api:gax-httpjson:jar:2.62.0:compile (version managed from 2.62.0)
+[[1;34mINFO[m] |  |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.code.gson:gson:jar:2.12.1:compile - version managed from 2.12.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.http-client:google-http-client-gson:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.protobuf:protobuf-java-util:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.threeten:threetenbp:jar:1.7.0:compile (version managed from 1.7.0; scope not updated to compile)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.code.gson:gson:jar:2.12.1:compile (version managed from 2.12.1)
+[[1;34mINFO[m] |  |  \- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-alts:jar:1.70.0:compile (version managed from 1.70.0; scope not updated to compile)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-auth:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-core:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-context:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-grpclb:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (org.conscrypt:conscrypt-openjdk-uber:jar:2.5.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-jre; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.24.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (io.grpc:grpc-netty-shaded:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-googleapis:jar:1.70.0:runtime (version managed from 1.70.0; scope not updated to runtime)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-alts:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-core:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-xds:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-rls:jar:1.70.0:runtime (version managed from 1.70.0)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-util:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-core:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-protobuf:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (io.grpc:grpc-stub:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:runtime - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- javax.annotation:javax.annotation-api:jar:1.3.2:compile (version managed from 1.3.2; scope managed from compile)
+[[1;34mINFO[m] +- com.google.cloud:google-cloud-trace:jar:2.53.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.errorprone:error_prone_annotations:jar:2.36.0:compile (version managed from 2.35.1; scope not updated to compile)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime (version managed from 1.67.1)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.40.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile (version managed from 3.0.0)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-trace-v1:jar:2.53.0:compile - omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.api.grpc:proto-google-cloud-trace-v2:jar:2.53.0:compile
+[[1;34mINFO[m] |  |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.35.1; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:failureaccess:jar:1.0.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  +- (com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile - omitted for duplicate)
+[[1;34mINFO[m] |  |  \- (org.checkerframework:checker-qual:jar:3.49.0:compile - version managed from 3.47.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.guava:failureaccess:jar:1.0.2:compile
+[[1;34mINFO[m] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[[1;34mINFO[m] |  +- org.checkerframework:checker-qual:jar:3.49.0:compile (version managed from 3.47.0)
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.57.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.29.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-context:jar:1.70.0:compile (version managed from 1.67.1; scope not updated to compile)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.29.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:gax-grpc:jar:2.62.0:compile - version managed from 2.57.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-inprocess:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-core:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.android:annotations:jar:4.1.1.4:runtime
+[[1;34mINFO[m] |  +- org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:compile (version managed from 1.24; scope not updated to compile)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-alts:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-grpclb:jar:1.70.0:compile (version managed from 1.67.1)
+[[1;34mINFO[m] |  +- org.conscrypt:conscrypt-openjdk-uber:jar:2.5.2:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-auth:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-netty-shaded:jar:1.70.0:compile - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-util:jar:1.70.0:runtime (version managed from 1.67.1)
+[[1;34mINFO[m] |  +- io.perfmark:perfmark-api:jar:0.27.0:runtime (version managed from 0.27.0)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-googleapis:jar:1.70.0:runtime - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- io.grpc:grpc-xds:jar:1.70.0:runtime (version managed from 1.67.1)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-services:jar:1.70.0:runtime - version managed from 1.67.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- com.google.re2j:re2j:jar:1.7:runtime
+[[1;34mINFO[m] |  +- (com.google.api:gax-httpjson:jar:2.62.0:compile - version managed from 2.57.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.gson:gson:jar:2.12.1:compile - version managed from 2.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- org.apache.httpcomponents:httpclient:jar:4.5.14:compile (version managed from 4.5.14; scope not updated to compile)
+[[1;34mINFO[m] |  +- commons-codec:commons-codec:jar:1.18.0:compile (version managed from 1.17.1; scope not updated to compile)
+[[1;34mINFO[m] |  +- org.apache.httpcomponents:httpcore:jar:4.4.16:compile (version managed from 4.4.16; scope not updated to compile)
+[[1;34mINFO[m] |  +- io.opencensus:opencensus-contrib-http-util:jar:0.31.1:compile (version managed from 0.31.1; scope not updated to compile)
+[[1;34mINFO[m] |  +- com.google.http-client:google-http-client-gson:jar:1.46.3:compile (version managed from 1.45.0)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  \- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-api:jar:1.70.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-netty-shaded:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-util:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-core:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.perfmark:perfmark-api:jar:0.27.0:runtime - version managed from 0.27.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:runtime - version managed from 1.24; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-protobuf:jar:1.70.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.grpc:grpc-protobuf-lite:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] +- io.grpc:grpc-stub:jar:1.70.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.codehaus.mojo:animal-sniffer-annotations:jar:1.24:compile - version managed from 1.24; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.3.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:api-common:jar:2.45.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java:jar:3.25.5:compile
+[[1;34mINFO[m] +- com.google.protobuf:protobuf-java-util:jar:3.25.5:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.gson:gson:jar:2.12.1:compile - version managed from 2.8.9; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.18.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 32.0.1-jre; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  \- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.cloud:google-cloud-core:jar:2.52.0:compile
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client-gson:jar:1.46.3:compile - version managed from 1.46.3; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile
+[[1;34mINFO[m] |  +- (com.google.auto.value:auto-value-annotations:jar:1.11.0:compile - version managed from 1.11.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client:jar:1.46.3:compile - version managed from 1.46.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.http-client:google-http-client-gson:jar:1.46.3:compile - version managed from 1.46.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.code.gson:gson:jar:2.12.1:compile - version managed from 2.12.1; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.http-client:google-http-client:jar:1.46.3:compile
+[[1;34mINFO[m] |  +- (org.apache.httpcomponents:httpclient:jar:4.5.14:compile - version managed from 4.5.14; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.apache.httpcomponents:httpcore:jar:4.4.16:compile - version managed from 4.4.16; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 30.1.1-android; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-context:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.opencensus:opencensus-contrib-http-util:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-spanner-executor-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-iam-v1:jar:1.48.0:compile - version managed from 1.48.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-admin-instance-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-cloud-spanner-admin-database-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:proto-google-cloud-trace-v1:jar:2.53.0:compile (scope not updated to compile)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.48.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api.grpc:grpc-google-cloud-spanner-executor-v1:jar:6.88.0-SNAPSHOT:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-cloud-spanner-executor-v1:jar:6.88.0-SNAPSHOT:compile - version managed from 6.88.0-SNAPSHOT; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (javax.annotation:javax.annotation-api:jar:1.3.2:compile - version managed from 1.3.2; scope managed from compile; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.guava:guava:jar:33.4.0-jre:compile (scope not updated to compile)
+[[1;34mINFO[m] |  +- (com.google.guava:failureaccess:jar:1.0.2:compile - omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile - omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.code.findbugs:jsr305:jar:3.0.2:compile - version managed from 3.0.2; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.checkerframework:checker-qual:jar:3.49.0:compile - version managed from 3.43.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:compile - version managed from 2.36.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.j2objc:j2objc-annotations:jar:3.0.0:compile - version managed from 3.0.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:gax:jar:2.62.0:compile
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:compile - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:compile - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:gax-grpc:jar:2.62.0:compile
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:compile - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:compile - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:compile - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:compile - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-inprocess:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:compile - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:compile - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-alts:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-auth:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-netty-shaded:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.grpc:grpc-googleapis:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.code.findbugs:jsr305:jar:3.0.2:compile (scope not updated to compile)
+[[1;34mINFO[m] +- com.google.auth:google-auth-library-credentials:jar:1.33.1:compile
+[[1;34mINFO[m] +- io.grpc:grpc-services:jar:1.70.0:compile
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:compile - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-core:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-util:jar:1.70.0:runtime - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:runtime - version managed from 33.3.1-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:runtime - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.errorprone:error_prone_annotations:jar:2.36.0:runtime - version managed from 2.30.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.code.gson:gson:jar:2.12.1:runtime - version managed from 2.11.0; omitted for duplicate)
+[[1;34mINFO[m] +- commons-cli:commons-cli:jar:1.9.0:compile
+[[1;34mINFO[m] +- commons-io:commons-io:jar:2.18.0:compile
+[[1;34mINFO[m] +- junit:junit:jar:4.13.2:test
+[[1;34mINFO[m] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[[1;34mINFO[m] +- com.google.api:gax:jar:testlib:2.62.0:test
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:test - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:test - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:test - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java:jar:3.25.5:test - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.protobuf:protobuf-java-util:jar:3.25.5:test - version managed from 3.25.5; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:test - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.opencensus:opencensus-api:jar:0.31.1:test - version managed from 0.31.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:test - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  \- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:test - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] +- com.google.api:gax-grpc:jar:testlib:2.62.0:test
+[[1;34mINFO[m] |  +- (com.google.api:gax:jar:2.62.0:test - version managed from 2.62.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api:api-common:jar:2.45.0:test - version managed from 2.45.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.api.grpc:proto-google-common-protos:jar:2.53.0:test - version managed from 2.53.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-credentials:jar:1.33.1:test - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.guava:guava:jar:33.4.0-jre:test - version managed from 33.4.0-jre; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-api:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-inprocess:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (org.threeten:threetenbp:jar:1.7.0:test - version managed from 1.7.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (com.google.auth:google-auth-library-oauth2-http:jar:1.33.1:test - version managed from 1.33.1; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-alts:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-auth:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-protobuf:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-stub:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  +- (io.grpc:grpc-netty-shaded:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] |  \- (io.grpc:grpc-googleapis:jar:1.70.0:test - version managed from 1.70.0; omitted for duplicate)
+[[1;34mINFO[m] \- org.apache.maven.surefire:surefire-junit4:jar:3.5.2:test
+[[1;34mINFO[m]    +- org.apache.maven.surefire:common-java5:jar:3.5.2:test
+[[1;34mINFO[m]    |  +- org.apache.maven.surefire:surefire-shared-utils:jar:3.5.2:test
+[[1;34mINFO[m]    |  \- (org.apache.maven.surefire:surefire-api:jar:3.5.2:test - omitted for duplicate)
+[[1;34mINFO[m]    +- org.apache.maven.surefire:common-junit4:jar:3.5.2:test
+[[1;34mINFO[m]    |  +- org.apache.maven.surefire:surefire-logger-api:jar:3.5.2:test
+[[1;34mINFO[m]    |  +- (org.apache.maven.surefire:surefire-shared-utils:jar:3.5.2:test - omitted for duplicate)
+[[1;34mINFO[m]    |  +- org.apache.maven.surefire:common-junit3:jar:3.5.2:test
+[[1;34mINFO[m]    |  |  \- (org.apache.maven.surefire:surefire-api:jar:3.5.2:test - omitted for duplicate)
+[[1;34mINFO[m]    |  +- (org.apache.maven.surefire:common-java5:jar:3.5.2:test - omitted for duplicate)
+[[1;34mINFO[m]    |  \- (org.apache.maven.surefire:surefire-api:jar:3.5.2:test - omitted for duplicate)
+[[1;34mINFO[m]    \- org.apache.maven.surefire:surefire-api:jar:3.5.2:test
+[[1;34mINFO[m]       +- (org.apache.maven.surefire:surefire-logger-api:jar:3.5.2:test - omitted for duplicate)
+[[1;34mINFO[m]       \- (org.apache.maven.surefire:surefire-shared-utils:jar:3.5.2:test - omitted for duplicate)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------< [0;36mcom.google.cloud:google-cloud-spanner-bom[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding Google Cloud Spanner BOM 6.88.0-SNAPSHOT                [12/12][m
+[[1;34mINFO[m]   from google-cloud-spanner-bom/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.8.1:tree[m [1m(default-cli)[m @ [36mgoogle-cloud-spanner-bom[0;1m ---[m
+[[1;34mINFO[m] com.google.cloud:google-cloud-spanner-bom:pom:6.88.0-SNAPSHOT
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary for Google Cloud Spanner Parent 6.88.0-SNAPSHOT:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Google Cloud Spanner Parent ........................ [1;32mSUCCESS[m [  0.619 s]
+[[1;34mINFO[m] proto-google-cloud-spanner-admin-instance-v1 ....... [1;32mSUCCESS[m [  0.058 s]
+[[1;34mINFO[m] proto-google-cloud-spanner-v1 ...................... [1;32mSUCCESS[m [  0.016 s]
+[[1;34mINFO[m] proto-google-cloud-spanner-admin-database-v1 ....... [1;32mSUCCESS[m [  0.015 s]
+[[1;34mINFO[m] grpc-google-cloud-spanner-admin-instance-v1 ........ [1;32mSUCCESS[m [  0.038 s]
+[[1;34mINFO[m] grpc-google-cloud-spanner-v1 ....................... [1;32mSUCCESS[m [  0.017 s]
+[[1;34mINFO[m] grpc-google-cloud-spanner-admin-database-v1 ........ [1;32mSUCCESS[m [  0.017 s]
+[[1;34mINFO[m] proto-google-cloud-spanner-executor-v1 ............. [1;32mSUCCESS[m [  0.011 s]
+[[1;34mINFO[m] grpc-google-cloud-spanner-executor-v1 .............. [1;32mSUCCESS[m [  0.016 s]
+[[1;34mINFO[m] Google Cloud Spanner ............................... [1;32mSUCCESS[m [  0.203 s]
+[[1;34mINFO[m] Google Cloud Spanner Executor ...................... [1;32mSUCCESS[m [  0.312 s]
+[[1;34mINFO[m] Google Cloud Spanner BOM ........................... [1;32mSUCCESS[m [  0.003 s]
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.552 s
+[[1;34mINFO[m] Finished at: 2025-03-13T17:50:07Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
